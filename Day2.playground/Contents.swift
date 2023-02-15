@@ -20,3 +20,8 @@ print(greeting)
 
 let saying = "I like saying \(first + second + third)"
 print(saying)
+
+let celcius: Float = 100
+let farenheit: Float = (celcius * 9 / 5) + 32
+print("\(celcius)° Degrees Celcius")
+print("\(farenheit)° Degrees Farenheit")
