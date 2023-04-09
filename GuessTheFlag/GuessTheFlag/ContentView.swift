@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    func executeDelete() {
+        print("Now Deleting")
+    }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("Hello, Swift")
-            Text("Hello, world!")
-        }
-        .padding()
+        Image(systemName: "pencil")
     }
 }
 
