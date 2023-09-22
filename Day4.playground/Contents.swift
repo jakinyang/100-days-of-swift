@@ -8,8 +8,8 @@ let num: Int = 13
 let pi: Double = 3.14
 let isItTrue: Bool = true
 
-let albums: [String] = ["Fearless", "1989"]
-var user: [String: Int] = ["Id": 19]
+let albums: [String] = ["Fearless", "1989", "1989", "Fearless"]
+var user: [String: Int] = ["Id": 19, "Moo": 20]
 var books: Set<String> = Set(["LOTR", "Narnia", "Hunger Games"])
 
 enum UIStyle {
@@ -28,3 +28,5 @@ print(setString.count)
 
 
 
+print(albums.count)
+print(Set(albums).count)

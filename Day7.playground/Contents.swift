@@ -1,5 +1,21 @@
 import Cocoa
 
+func greet(message: String) -> Void {
+    print(message)
+}
+func greetingMessage(name: String) -> Void {
+    greet(message: "Hello")
+    greet(message: "Welcome to the spa \(name)!")
+}
+greetingMessage(name: "Jessye")
+
+let messages = ["Oi!", "Pssst!", "Hey!", "Over Here!"]
+
+func giveMeRandomMessage(messages: [String]) -> String {
+    messages.randomElement() ?? "What?"
+}
+giveMeRandomMessage(messages: messages)
+
 func rollDice() -> Int {
     return Int.random(in: 1...6)
 }

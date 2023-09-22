@@ -45,12 +45,12 @@ let sortedCaptainTeam = team.sorted(by: captainFirstSorted)
 print(sortedCaptainTeam)
 
 let captainFirstTeam = team.sorted(by: {(name1: String, name2: String) -> Bool in
-                                   if name1 == "Suzanne" {
-                                       return true
-                                   } else if name2 == "Suzanne" {
-                                       return false
-                                   }
-                                   return name1 < name2}
+    if name1 == "Suzanne" {
+        return true
+    } else if name2 == "Suzanne" {
+        return false
+    }
+    return name1 < name2}
 )
 
 print(captainFirstTeam)
@@ -59,7 +59,7 @@ let newTeam = ["Gloria", "Suzanne", "Piper", "Tiffany", "Tasha"]
 
 let newSortedTeam = newTeam.sorted(by: { (a: String, b: String) -> Bool in
     if a == "Suzanne" {
-            return true
+        return true
     } else if b == "Suzanne" {
         return false
     }
@@ -69,7 +69,7 @@ let newSortedTeam = newTeam.sorted(by: { (a: String, b: String) -> Bool in
 // Alternative syntax for closure with a set return value
 let newSortedTeamShort = newTeam.sorted(by: { a, b in
     if a == "Suzanne" {
-            return true
+        return true
     } else if b == "Suzanne" {
         return false
     }
@@ -79,7 +79,7 @@ let newSortedTeamShort = newTeam.sorted(by: { a, b in
 // Trailing Closure Syntax
 let newSortedTeamShorter = newTeam.sorted { a, b in
     if a == "Suzanne" {
-            return true
+        return true
     } else if b == "Suzanne" {
         return false
     }
@@ -89,7 +89,7 @@ let newSortedTeamShorter = newTeam.sorted { a, b in
 
 let newSortedTeamShortHand = newTeam.sorted {
     if $0 == "Suzanne" {
-            return true
+        return true
     } else if $1 == "Suzanne" {
         return false
     }
@@ -149,3 +149,13 @@ luckyNumbers.filter {
 }.map {
     print("\($0) is a lucky number")
 }
+
+let customizeGreetFunction = { (name: String) -> () -> Void in
+    let customGreeting = {
+        print("Hello, \(name)!")
+    }
+    return customGreeting
+}
+
+let greetJessye = customizeGreetFunction("Jessye");
+greetJessye()

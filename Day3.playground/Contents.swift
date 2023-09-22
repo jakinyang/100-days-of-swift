@@ -28,8 +28,9 @@ print(albums)
 
 print(albums.contains("Fearless"))
 
-numbers.reversed()
-numbers
+let reversedNumbers = numbers.reversed()
+print(reversedNumbers)
+print(numbers)
 
 scores.sort()
 
@@ -51,6 +52,14 @@ heights["Jae"] = 178
 // Set
 let people = Set(["John", "Paul", "George", "Ringo", "Phil"])
 
+var raccoonMoos = Set([String]())
+raccoonMoos.insert("Rumpus")
+print(raccoonMoos)
+raccoonMoos.insert("Edgar")
+raccoonMoos.insert("Serena")
+print(raccoonMoos)
+raccoonMoos.remove("Serena")
+print(raccoonMoos)
 var raccoons = Set<String>()
 raccoons.insert("Joey")
 raccoons.insert("Rumpus")
@@ -70,3 +79,31 @@ day = .Friday
 day = .Tuesday
 
 print("It's \(day), \(day), gotta get down on \(day)")
+
+var somePeople = Array<String>()
+var somePlaces = Array<Int>()
+var someThings = Array<Bool>()
+let morePeople = [String]()
+let morePlaces = [Int]()
+let moreThings = [Bool]()
+
+let boyGenius = [
+    "member1": "Julien Baker",
+    "member2": "Lucy Dacus",
+    "member3": "Phoebe Bridgers"
+]
+
+print(boyGenius["member1", default: "Unknown"])
+print(boyGenius["member2", default: "Unknown"])
+print(boyGenius["member3", default: "Unknown"])
+
+var band = [String: [String: [String]]]()
+band["BoyGenius"] = ["members": ["Julien Baker", "Phoebe Bridgers", "Lucy Dacus"]]
+print(band)
+
+enum Pizzas {
+    case Hawaiian, Pepperoni, Cheese, Canadian, Vegetarian
+}
+
+var myOrder = Pizzas.Hawaiian;
+print(myOrder)
